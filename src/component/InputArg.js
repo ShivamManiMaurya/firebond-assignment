@@ -8,6 +8,7 @@ function InputArg() {
                 type="text"
                 value="My Arg"
                 className="border border-zinc-500 pl-2"
+                onChange={() => {}}
             />
             <Boolean />
         </div>
