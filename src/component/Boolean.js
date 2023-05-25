@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 
-function Boolean({ boolVal }) {
+function Boolean() {
     const [option, setOption] = useState(false);
+
+    const BoolContext = createContext(false);
 
     // useEffect(() => {
     //     return clicked(setOption(option));
@@ -14,20 +16,21 @@ function Boolean({ boolVal }) {
     const handleBoolean = (e) => {
         setOption(e.target.value);
         opt = e.target.value;
-        return boolVal(opt);
     };
 
     return (
-        <select
-            name="bool"
-            id="bool"
-            className="border border-zinc-500"
-            value={option}
-            onChange={handleBoolean}
-        >
-            <option value="true">True</option>
-            <option value="false">False</option>
-        </select>
+        <BoolContext.Provider value={opt}>
+            <select
+                name="bool"
+                id="bool"
+                className="border border-zinc-500"
+                value={option}
+                onChange={handleBoolean}
+            >
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+        </BoolContext.Provider>
     );
 }
 

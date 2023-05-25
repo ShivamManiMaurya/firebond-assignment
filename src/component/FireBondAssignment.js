@@ -4,16 +4,21 @@ import TypeSelection from "./TypeSelection";
 
 function FireBondAssignment() {
     const [count, setCount] = useState(1);
+    const [boolVal, setBoolVal] = useState();
 
     const handleArg = () => {
         setCount(count + 1);
+    };
+
+    const handleData = (data) => {
+        setBoolVal(data);
     };
 
     return (
         <div>
             <div>
                 {[...Array(count)].map((count, index) => (
-                    <InputArg key={index} />
+                    <InputArg key={index} boolVal={handleData} />
                 ))}
                 <div>
                     <button
@@ -24,7 +29,7 @@ function FireBondAssignment() {
                     </button>
                 </div>
             </div>
-            <TypeSelection />
+            <TypeSelection boolVal={boolVal} />
         </div>
     );
 }
