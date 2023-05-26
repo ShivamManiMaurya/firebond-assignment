@@ -26,6 +26,7 @@ function Boolean() {
                 className="border border-zinc-500"
                 value={option}
                 onChange={handleBoolean}
+                // flag={opt}
             >
                 <option value="true">True</option>
                 <option value="false">False</option>

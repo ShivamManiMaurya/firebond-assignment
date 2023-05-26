@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import Boolean from "./Boolean";
 import Result from "./Result";
 import BoolContext from "./Boolean";
@@ -10,7 +10,7 @@ function TypeSelection({ boolVal }) {
 
     const boolValue = useContext(BoolContext);
     // setBool(boolValue);
-    console.log(boolValue);
+    // console.log(boolValue);
 
     const handleChange = (e) => {
         setOption(e.target.value);

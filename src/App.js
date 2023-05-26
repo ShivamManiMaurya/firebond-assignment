@@ -1,5 +1,8 @@
 import "./App.css";
-import FireBondAssignment from "./component/FireBondAssignment";
+// import FireBondAssignment from "./component/FireBondAssignment";
+// import Test from "./components/Test.js";
+// import BooleanState from "./components/BooleanState";
+import InputArg from "./components/InputArg.js";
 
 function App() {
     return (
@@ -8,7 +11,8 @@ function App() {
                 Jai Shree Ram
             </h1>
             <div className="py-2">
-                <FireBondAssignment />
+                {" "}
+                <InputArg />
             </div>
         </div>
     );
